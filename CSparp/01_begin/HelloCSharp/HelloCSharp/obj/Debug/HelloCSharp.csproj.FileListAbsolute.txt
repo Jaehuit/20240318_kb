@@ -1,0 +1,10 @@
+D:\이동준T\work\20240318_kb\CSparp\01_begin\HelloCSharp\HelloCSharp\bin\Debug\HelloCSharp.exe.config
+D:\이동준T\work\20240318_kb\CSparp\01_begin\HelloCSharp\HelloCSharp\bin\Debug\HelloCSharp.exe
+D:\이동준T\work\20240318_kb\CSparp\01_begin\HelloCSharp\HelloCSharp\bin\Debug\HelloCSharp.pdb
+D:\이동준T\work\20240318_kb\CSparp\01_begin\HelloCSharp\HelloCSharp\obj\Debug\HelloCSharp.csproj.AssemblyReference.cache
+D:\이동준T\work\20240318_kb\CSparp\01_begin\HelloCSharp\HelloCSharp\obj\Debug\HelloCSharp.Form1.resources
+D:\이동준T\work\20240318_kb\CSparp\01_begin\HelloCSharp\HelloCSharp\obj\Debug\HelloCSharp.Properties.Resources.resources
+D:\이동준T\work\20240318_kb\CSparp\01_begin\HelloCSharp\HelloCSharp\obj\Debug\HelloCSharp.csproj.GenerateResource.cache
+D:\이동준T\work\20240318_kb\CSparp\01_begin\HelloCSharp\HelloCSharp\obj\Debug\HelloCSharp.csproj.CoreCompileInputs.cache
+D:\이동준T\work\20240318_kb\CSparp\01_begin\HelloCSharp\HelloCSharp\obj\Debug\HelloCSharp.exe
+D:\이동준T\work\20240318_kb\CSparp\01_begin\HelloCSharp\HelloCSharp\obj\Debug\HelloCSharp.pdb

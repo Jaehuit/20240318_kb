@@ -1,0 +1,7 @@
+D:\이동준T\work\20240318_kb\CSparp\01_begin\ConsoleApp1\HelloCSharp00\bin\Debug\HelloCSharp00.exe.config
+D:\이동준T\work\20240318_kb\CSparp\01_begin\ConsoleApp1\HelloCSharp00\bin\Debug\HelloCSharp00.exe
+D:\이동준T\work\20240318_kb\CSparp\01_begin\ConsoleApp1\HelloCSharp00\bin\Debug\HelloCSharp00.pdb
+D:\이동준T\work\20240318_kb\CSparp\01_begin\ConsoleApp1\HelloCSharp00\obj\Debug\HelloCSharp00.csproj.AssemblyReference.cache
+D:\이동준T\work\20240318_kb\CSparp\01_begin\ConsoleApp1\HelloCSharp00\obj\Debug\HelloCSharp00.csproj.CoreCompileInputs.cache
+D:\이동준T\work\20240318_kb\CSparp\01_begin\ConsoleApp1\HelloCSharp00\obj\Debug\HelloCSharp00.exe
+D:\이동준T\work\20240318_kb\CSparp\01_begin\ConsoleApp1\HelloCSharp00\obj\Debug\HelloCSharp00.pdb
