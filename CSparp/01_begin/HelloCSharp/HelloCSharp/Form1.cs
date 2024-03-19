@@ -20,6 +20,8 @@ namespace HelloCSharp
         private void Form1_Load(object sender, EventArgs e)
         {
             Console.WriteLine("안녕");
+            Console.WriteLine("안녕");
+            Console.WriteLine("안녕");
             Console.Write("Hello");
             Console.WriteLine("안녕");
             Console.WriteLine("안녕");
