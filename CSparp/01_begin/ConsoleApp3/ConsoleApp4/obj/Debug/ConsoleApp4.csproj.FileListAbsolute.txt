@@ -1,7 +1,0 @@
-D:\이동준T\work\20240318_kb\CSparp\01_begin\ConsoleApp3\ConsoleApp4\bin\Debug\ConsoleApp4.exe.config
-D:\이동준T\work\20240318_kb\CSparp\01_begin\ConsoleApp3\ConsoleApp4\bin\Debug\ConsoleApp4.exe
-D:\이동준T\work\20240318_kb\CSparp\01_begin\ConsoleApp3\ConsoleApp4\bin\Debug\ConsoleApp4.pdb
-D:\이동준T\work\20240318_kb\CSparp\01_begin\ConsoleApp3\ConsoleApp4\obj\Debug\ConsoleApp4.csproj.AssemblyReference.cache
-D:\이동준T\work\20240318_kb\CSparp\01_begin\ConsoleApp3\ConsoleApp4\obj\Debug\ConsoleApp4.csproj.CoreCompileInputs.cache
-D:\이동준T\work\20240318_kb\CSparp\01_begin\ConsoleApp3\ConsoleApp4\obj\Debug\ConsoleApp4.exe
-D:\이동준T\work\20240318_kb\CSparp\01_begin\ConsoleApp3\ConsoleApp4\obj\Debug\ConsoleApp4.pdb
