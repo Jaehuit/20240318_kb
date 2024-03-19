@@ -20,6 +20,7 @@ namespace ConsoleApp4
 
             // 덧셈 결과 출력
             Console.WriteLine("1부터 100까지의 모든 정수를 더한 결과: " + sum);
+            Console.WriteLine("1부터 100까지의 모든 정수를 더한 결과: " + sum);
 
 
 
