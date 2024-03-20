@@ -18,6 +18,7 @@ namespace WindowsFormsApp2
 
             myButton.Text = "코드에서 변경!";
 
+            Console.WriteLine("안녕");
             Random random = new Random();
             myButton.Text = random.Next().ToString();
             
