@@ -1,51 +1,59 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Data;
 using System.Data.SqlClient;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Cosmetic_AI;
 
-namespace Cosmetic_AI
+namespace teamProject
 {
-    public class DBHelper_MSSQL : DBHelper        
+    public class DBHelper_MSSQL : DBHelper
     {
-        private static DBHelper_MSSQL instance = null;
-
+        // 싱글톤 적용
+        // 얘를 계속 돌려씀
+        private static DBHelper_MSSQL instance;
         public static DBHelper_MSSQL getInstance
         {
             get
             {
-                if (instance == null)
+                if (instance == null) // 없으면 인스턴스 하나 만들고
+                {
                     instance = new DBHelper_MSSQL();
-                return instance;
+                }
+                return instance; // 있으면 계속 재활용
             }
         }
+        private DBHelper_MSSQL() { } // 외부에서 인스턴스 못 만들게
 
-        private DBHelper_MSSQL() //private을 썼다는 건 외부에서 인스턴스 못 만듦
-        {
-
-        }
         protected override void ConnectDB()
         {
             conn.ConnectionString = $"Data Source=({"local"}); " +
-                 $"Initial Catalog = {"ProjectDataBase"}; Integrated Security = {"SSPI"}; Timeout={3}";
+                $"Initial Catalog = {"ProjectDataBase"}; Integrated Security = {"SSPI"}; Timeout={3}";
+            conn = new SqlConnection(conn.ConnectionString);
             conn.Open();
         }
 
-        public override void DoQuery(string ps = "-1")  // selest
+        // DoQuery() // ps 값은 자동으로 "-1"을 대입
+        // DoQuery("123") // ps 값을 "123"을 대입함
+        // 즉, 기본값 설정하는 방법
+        public override void DoQuery(string ps = "-1", string ps2 = "-1") // select 전체 or 특정 데이터 정보
         {
             try
             {
                 ConnectDB();
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = conn;
-                if (ps.Equals("-1")) //매개 변수 없는 경우
+                if (ps.Equals("-1")) // 매개 변수 없는 경우
+                {
                     cmd.CommandText = "select * from Process_Data";
+                }
                 else
                 {
-                    cmd.CommandText = "select * from Process_Data where datetime=@datetime";
-                    cmd.Parameters.AddWithValue("@datetime", ps);
+                    cmd.CommandText = "select * from Process_Data where datetime between  @start AND @end;";
+                    cmd.Parameters.AddWithValue("@a", ps);
+                    cmd.Parameters.AddWithValue("@b", ps2);
                 }
                 da = new SqlDataAdapter(cmd);
                 ds = new DataSet();
@@ -54,10 +62,10 @@ namespace Cosmetic_AI
             }
             catch (Exception ex)
             {
-                System.Windows.Forms.MessageBox.Show(ex.Message);
-                System.Windows.Forms.MessageBox.Show(ex.StackTrace);
-                // DataManager.printLog(ex.Message);
-                // DataManager.printLog(ex.StackTrace);
+                //System.Windows.Forms.MessageBox.Show(ex.Message);
+                //System.Windows.Forms.MessageBox.Show(ex.StackTrace);
+                DataManager.PrintLog(ex.Message);
+                DataManager.PrintLog(ex.StackTrace);
             }
             finally
             {
@@ -65,47 +73,47 @@ namespace Cosmetic_AI
             }
         }
 
-        /* public override void DoQuery(ProcessData cos)
+        public override void DoQuery(PData data)
         {
-
             try
             {
                 ConnectDB();
                 SqlCommand cmd = new SqlCommand();
                 cmd.Connection = conn;
                 string sql = "";
-                sql = "update Process_Data set datetime=@datetime," +
-                    "drivername=@drivername,phonenumber=@phonenumber," +
-                    "parkingtime=@parkingtime where parkingspot=@parkingspot";
-                cmd.Parameters.AddWithValue("@carnumber", car.carNumber);
-                cmd.Parameters.AddWithValue("@drivername", car.driverName);
-                cmd.Parameters.AddWithValue("@phonenumber", car.phoneNumber);
-                cmd.Parameters.AddWithValue("@parkingtime", car.parkingTime);
-                cmd.Parameters.AddWithValue("@parkingspot", car.parkingSpot);
-                if (car.carNumber == "") //차뺀다는 의미
+                sql = "update Process_Data set currentA=@currentA where currentB=@currentB";
+                cmd.Parameters.AddWithValue("@currentA", data.CurrentA);
+                cmd.Parameters.AddWithValue("@currentB", data.CurrentB);
+
+                if (data.CurrentA.ToString() == "") // 삭제 시
                 {
-                    sql = "update parkingmanager set carnumber=@carnumber," +
-                        "drivername=@drivername,phonenumber=@phonenumber," +
-                        "parkingtime='' where parkingspot=@parkingspot";
-                    cmd.Parameters.RemoveAt(3);  // @parkingtime 삭제
+                    sql = "update parkingLot set currentA=@currentA where currentB=@currentB";
                 }
+
                 cmd.CommandText = sql;
                 cmd.ExecuteNonQuery();
 
             }
             catch (Exception ex)
             {
-
-                System.Windows.Forms.MessageBox.Show(ex.Message);
-                System.Windows.Forms.MessageBox.Show(ex.StackTrace);
-                DataManager.printLog(ex.Message);
-                DataManager.printLog(ex.StackTrace);
+                //System.Windows.Forms.MessageBox.Show(ex.Message);
+                //System.Windows.Forms.MessageBox.Show(ex.StackTrace);
+                DataManager.PrintLog(ex.Message);
+                DataManager.PrintLog(ex.StackTrace);
             }
             finally
             {
                 conn.Close();
             }
         }
-        */
+
+        public void deleteData(string ps)
+        {
+
+        }
+        public void insertData(string ps)
+        {
+
+        }
     }
 }

@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Cosmetic_AI
+namespace teamProject
 {
     public abstract class DBHelper
     {
@@ -16,9 +16,9 @@ namespace Cosmetic_AI
         public DataTable dt;
 
         protected abstract void ConnectDB();
-        public abstract void DoQuery(string ps = "-1"); //select용
 
-        // public abstract void DoQuery(ProcessData cos);
+        public abstract void DoQuery(string ps = "-1", string ps2 = "-1"); // select 용
 
+        public abstract void DoQuery(PData data); // insert, update, delete 용
     }
 }
