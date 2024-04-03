@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="HelloCSharp05.Animal" Collapsed="true">
+    <Position X="4" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQAAAAAAAAAAEAIAAAAAAAAAIEAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Animal.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HelloCSharp05.Bulbasaur" Collapsed="true">
+    <Position X="3" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQCAAAAAAISAEACAIAAAAIAAIAAAAAAAAAAAAAABA=</HashCode>
+      <FileName>Bulbasaur.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="HelloCSharp05.Cat" Collapsed="true">
+    <Position X="5.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQAAAAAAAAAAEAAAAAAAAAAAIAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Cat.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HelloCSharp05.Chameleon" Collapsed="true">
+    <Position X="7.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQAAAAAAAAQAEAAAIAAAAAAAYAAACAAAAAAAAAAAA=</HashCode>
+      <FileName>Chameleon.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HelloCSharp05.Dog" Collapsed="true">
+    <Position X="0.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQAAAAAAAAAAEAAAAAAAAAAAIAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Dog.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HelloCSharp05.Dragon" Collapsed="true">
+    <Position X="5.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAgAAAAAAAAAAAIAAAAAAAAAAAAAABAQA=</HashCode>
+      <FileName>Dragon.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="HelloCSharp05.GoldDragon" Collapsed="true">
+    <Position X="5.5" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAgAAAAAAAAAAAIAAAAAAAAAAAAAABAQA=</HashCode>
+      <FileName>GoldDragon.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HelloCSharp05.Ivysaur" Collapsed="true">
+    <Position X="3" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAACAAAAAAAAAIAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Ivysaur.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HelloCSharp05.Program" Collapsed="true">
+    <Position X="13" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HelloCSharp05.Reptilia" Collapsed="true">
+    <Position X="7.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAQAAAAAAAAAAAAAQAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Reptilia.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HelloCSharp05.Venusaur" Collapsed="true">
+    <Position X="3" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAACAAAAAAACAAACAAAAAAIAAIAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Venusaur.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="HelloCSharp05.IBirds" Collapsed="true">
+    <Position X="0.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQA=</HashCode>
+      <FileName>IBirds.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="HelloCSharp05.ICreatures" Collapsed="true">
+    <Position X="0.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAA=</HashCode>
+      <FileName>ICreatures.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="HelloCSharp05.IFantasy" Collapsed="true">
+    <Position X="10.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAgAAAAAAAAAAAIAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IFantasy.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="HelloCSharp05.IPlant" Collapsed="true">
+    <Position X="13" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAACAAAAAAACAAAAAAAAAAIAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IPlant.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="HelloCSharp05.IPokemon" Collapsed="true">
+    <Position X="14.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAIQAAACAIAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IPokemon.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="맑은 고딕" Size="9" />
+</ClassDiagram>

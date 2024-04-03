@@ -1,0 +1,27 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34714.143
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cosmetic_AI", "Team2_Cosmetic\Cosmetic_AI.csproj", "{46FB749E-90AF-460F-8409-0C1E9DDDE335}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "솔루션 항목", "솔루션 항목", "{41AB3D8F-5D5E-4CF8-AC5B-3AA591C92910}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{46FB749E-90AF-460F-8409-0C1E9DDDE335}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{46FB749E-90AF-460F-8409-0C1E9DDDE335}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{46FB749E-90AF-460F-8409-0C1E9DDDE335}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{46FB749E-90AF-460F-8409-0C1E9DDDE335}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {24B99BFA-4A49-454B-A8DD-874DBD55CCD9}
+	EndGlobalSection
+EndGlobal
