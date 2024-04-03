@@ -70,6 +70,14 @@ namespace Cosmetic_AI
             // refreshScreen();
         }
 
-        
+        private void toolStripLabel1_Click(object sender, EventArgs e)
+        {
+            new Form4().ShowDialog();
+        }
+
+        private void toolStripLabel2_Click(object sender, EventArgs e)
+        {
+            new Form5().ShowDialog();
+        }
     }
 }

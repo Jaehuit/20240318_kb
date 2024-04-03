@@ -83,7 +83,7 @@
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(110, 23);
             this.button3.TabIndex = 4;
-            this.button3.Text = "제품 일부 조회";
+            this.button3.Text = "공정 일부 조회";
             this.button3.UseVisualStyleBackColor = true;
             // 
             // menuStrip1
@@ -103,7 +103,7 @@
             // 
             this.DataToolStrip.Name = "DataToolStrip";
             this.DataToolStrip.Size = new System.Drawing.Size(99, 22);
-            this.DataToolStrip.Text = "제품 데이터 관리";
+            this.DataToolStrip.Text = "공정 데이터 관리";
             this.DataToolStrip.Click += new System.EventHandler(this.DataToolStrip_Click);
             // 
             // ChartToolStrip
@@ -117,7 +117,8 @@
             // 
             this.toolStripLabel1.Name = "toolStripLabel1";
             this.toolStripLabel1.Size = new System.Drawing.Size(59, 22);
-            this.toolStripLabel1.Text = "제품 차트";
+            this.toolStripLabel1.Text = "공정 차트";
+            this.toolStripLabel1.Click += new System.EventHandler(this.toolStripLabel1_Click);
             // 
             // groupBox1
             // 
@@ -183,6 +184,7 @@
             this.toolStripLabel2.Name = "toolStripLabel2";
             this.toolStripLabel2.Size = new System.Drawing.Size(52, 22);
             this.toolStripLabel2.Text = "QC 차트";
+            this.toolStripLabel2.Click += new System.EventHandler(this.toolStripLabel2_Click);
             // 
             // Form1
             // 
