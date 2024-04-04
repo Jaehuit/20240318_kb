@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
@@ -11,12 +13,12 @@ namespace teamProject
 {
     public class Utils
     {
-        // 데이터 표시 포맷, 시간은 초까지, 소수점은 두 자리까지 - P or QData(Form2, 3)
+        // 데이터 표시 포맷 - P or QData(Form2, 3)
         public static void Format(DataGridView dgv, string data)
         {
             if (data.Equals("PData"))
             {
-                // 날짜 설정
+                // 날짜 설정 :: 시, 분, 초 까지
                 dgv.Columns["datetime"].DefaultCellStyle.Format = "yyyy-MM-dd HH:mm:ss";
                 // 소수점 이하 두 자리까지만 표시되도록 설정
                 string[] columns = { "ReactA_Temp", "ReactB_Temp", "ReactC_Temp", "ReactD_Temp", "ReactE_Temp",
@@ -29,8 +31,8 @@ namespace teamProject
 
             if (data.Equals("QData"))
             {
-                // 날짜 설정
-                dgv.Columns["date"].DefaultCellStyle.Format = "yyyy-MM-dd HH:mm:ss";
+                // 날짜 설정 :: 일 까지
+                dgv.Columns["date"].DefaultCellStyle.Format = "yyyy-MM-dd";
                 // 소수점 이하 두 자리까지만 표시되도록 설정
                 string[] columns2 = { "weight", "water", "material", "HSO", "pH" };
                 for (int i = 0; i < columns2.Length; i++)
@@ -44,7 +46,7 @@ namespace teamProject
         public static void Format(DataGridView dgv1, DataGridView dgv2)
         {
             dgv1.Columns["datetime"].DefaultCellStyle.Format = "yyyy-MM-dd HH:mm:ss";
-            dgv2.Columns["date"].DefaultCellStyle.Format = "yyyy-MM-dd HH:mm:ss";
+            dgv2.Columns["date"].DefaultCellStyle.Format = "yyyy-MM-dd";
 
             // gridview1 소수점 이하 두 자리까지만 표시되도록 설정
             string[] columns = { "ReactA_Temp", "ReactB_Temp", "ReactC_Temp", "ReactD_Temp", "ReactE_Temp",

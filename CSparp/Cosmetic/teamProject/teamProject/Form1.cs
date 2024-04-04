@@ -16,6 +16,7 @@ namespace teamProject
 {
     public partial class Form1 : Form
     {
+
         /*        
                  // 데이터 표시 포맷, 시간은 초까지, 소수점은 두 자리까지
                 public void Format()

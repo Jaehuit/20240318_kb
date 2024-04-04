@@ -60,6 +60,8 @@ namespace teamProject
 
             double tempValue;
 
+            if (!DateTime.TryParse(textBox1.Text, out _))
+                errors.Add("date");
             if (!double.TryParse(textBox2.Text, out tempValue))
                 errors.Add("weight");
             if (!double.TryParse(textBox3.Text, out tempValue))
@@ -70,7 +72,7 @@ namespace teamProject
                 errors.Add("HSO");
             if (!double.TryParse(textBox6.Text, out tempValue))
                 errors.Add("pH");
-            
+
 
             if (errors.Count > 0)
             {
@@ -80,16 +82,14 @@ namespace teamProject
             }
             else
             {
+                data.date = DateTime.Parse(textBox1.Text);
                 data.weight = double.Parse(textBox2.Text);
                 data.water = double.Parse(textBox3.Text);
                 data.material = double.Parse(textBox4.Text);
                 data.HSO = double.Parse(textBox5.Text);
                 data.pH = double.Parse(textBox6.Text);
-                
             }
             return data;
-
-
         }
         // 데이터 추가
         private void button1_Click(object sender, EventArgs e)
@@ -99,7 +99,7 @@ namespace teamProject
             {
                 DataManager.Save(data);
                 MessageBox.Show($"{data.date.ToString("yyyy-MM-dd HH:mm:ss.fffffff")} 데이터가 추가 되었습니다.");
-                Utils.reScreen(dataGridView1, "PData");
+                Utils.reScreen(dataGridView1, "QData");
             }
         }
 
