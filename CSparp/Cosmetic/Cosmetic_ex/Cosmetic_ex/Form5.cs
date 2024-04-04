@@ -1,6 +1,6 @@
-﻿using OxyPlot.Axes;
+﻿﻿using OxyPlot;
+using OxyPlot.Axes;
 using OxyPlot.Series;
-using OxyPlot;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -10,36 +10,25 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using OxyPlot.WindowsForms;
-using System.Windows.Forms.DataVisualization.Charting;
-using teamProject;
-using DataPoint = OxyPlot.DataPoint;
-using DateTimeIntervalType = OxyPlot.Axes.DateTimeIntervalType;
 
-namespace teamProject
+namespace tCosmetic_ex
 {
-    public partial class Form4 : Form
+    public partial class Form5 : Form
     {
-        public enum PDataFields
+        public enum QDataFields
         {
-            datetime,
-            ReactA_Temp,
-            ReactB_Temp,
-            ReactC_Temp,
-            ReactD_Temp,
-            ReactE_Temp,
-            ReactF_Temp,
-            ReactF_PH,
-            Power,
-            CurrentA,
-            CurrentB,
-            CurrentC
+            date,
+            weight,
+            water,
+            material,
+            HSO,
+            pH
         }
 
-        public Form4()
+        public Form5()
         {
             InitializeComponent();
-            DataManager.LoadP();
+            DataManager.LoadQ();
             // datetime between '2022-04-02' and '2022-04-09'
             loadCharts();
         }
@@ -55,13 +44,13 @@ namespace teamProject
                 MarkerType = MarkerType.Circle
             };
 
-            if (DataManager.datasP.Count > 0)
+            if (DataManager.datasQ.Count > 0)
             {
-                foreach (var data in DataManager.datasP)
+                foreach (var data in DataManager.datasQ)
                 {
                     series.Points.Add(
                         new DataPoint(
-                            DateTimeAxis.ToDouble(data.datetime),
+                            DateTimeAxis.ToDouble(data.date),
                             Convert.ToDouble(data.GetType().GetProperty(column).GetValue(data))
                             ));
                 }
@@ -92,18 +81,18 @@ namespace teamProject
         private void button1_Click(object sender, EventArgs e)
         {
             string where = textBox1.Text.ToString();
-            DataManager.LoadP(where);
+            DataManager.LoadQ(where);
             loadCharts();
         }
 
         private void loadCharts()
         {
-            plotView1.Model = DrawGraph(PDataFields.ReactA_Temp.ToString());
-            plotView2.Model = DrawGraph(PDataFields.ReactB_Temp.ToString());
-            plotView3.Model = DrawGraph(PDataFields.ReactC_Temp.ToString());
-            plotView4.Model = DrawGraph(PDataFields.ReactD_Temp.ToString());
-            plotView5.Model = DrawGraph(PDataFields.ReactE_Temp.ToString());
-            plotView6.Model = DrawGraph(PDataFields.ReactF_Temp.ToString());
+            plotView1.Model = DrawGraph(QDataFields.weight.ToString());
+            plotView2.Model = DrawGraph(QDataFields.water.ToString());
+            plotView3.Model = DrawGraph(QDataFields.material.ToString());
+            plotView4.Model = DrawGraph(QDataFields.HSO.ToString());
+            plotView5.Model = DrawGraph(QDataFields.pH.ToString());
         }
     }
 }
+

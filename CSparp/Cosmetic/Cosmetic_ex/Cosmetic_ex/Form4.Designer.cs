@@ -1,4 +1,5 @@
-﻿namespace teamProject
+﻿
+namespace Cosmetic_ex
 {
     partial class Form4
     {
@@ -36,6 +37,11 @@
             this.plotView6 = new OxyPlot.WindowsForms.PlotView();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
+            this.plotView7 = new OxyPlot.WindowsForms.PlotView();
+            this.plotView8 = new OxyPlot.WindowsForms.PlotView();
+            this.plotView9 = new OxyPlot.WindowsForms.PlotView();
+            this.plotView10 = new OxyPlot.WindowsForms.PlotView();
+            this.plotView11 = new OxyPlot.WindowsForms.PlotView();
             this.SuspendLayout();
             // 
             // plotView1
@@ -112,26 +118,91 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(86, 13);
+            this.textBox1.Location = new System.Drawing.Point(116, 38);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 21);
+            this.textBox1.Size = new System.Drawing.Size(246, 21);
             this.textBox1.TabIndex = 6;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(217, 10);
+            this.button1.Location = new System.Drawing.Point(368, 36);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 7;
-            this.button1.Text = "button1";
+            this.button1.Text = "조회";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // plotView7
+            // 
+            this.plotView7.Location = new System.Drawing.Point(12, 536);
+            this.plotView7.Name = "plotView7";
+            this.plotView7.PanCursor = System.Windows.Forms.Cursors.Hand;
+            this.plotView7.Size = new System.Drawing.Size(369, 138);
+            this.plotView7.TabIndex = 8;
+            this.plotView7.Text = "plotView7";
+            this.plotView7.ZoomHorizontalCursor = System.Windows.Forms.Cursors.SizeWE;
+            this.plotView7.ZoomRectangleCursor = System.Windows.Forms.Cursors.SizeNWSE;
+            this.plotView7.ZoomVerticalCursor = System.Windows.Forms.Cursors.SizeNS;
+            // 
+            // plotView8
+            // 
+            this.plotView8.Location = new System.Drawing.Point(419, 536);
+            this.plotView8.Name = "plotView8";
+            this.plotView8.PanCursor = System.Windows.Forms.Cursors.Hand;
+            this.plotView8.Size = new System.Drawing.Size(369, 138);
+            this.plotView8.TabIndex = 9;
+            this.plotView8.Text = "plotView8";
+            this.plotView8.ZoomHorizontalCursor = System.Windows.Forms.Cursors.SizeWE;
+            this.plotView8.ZoomRectangleCursor = System.Windows.Forms.Cursors.SizeNWSE;
+            this.plotView8.ZoomVerticalCursor = System.Windows.Forms.Cursors.SizeNS;
+            // 
+            // plotView9
+            // 
+            this.plotView9.Location = new System.Drawing.Point(12, 680);
+            this.plotView9.Name = "plotView9";
+            this.plotView9.PanCursor = System.Windows.Forms.Cursors.Hand;
+            this.plotView9.Size = new System.Drawing.Size(369, 138);
+            this.plotView9.TabIndex = 10;
+            this.plotView9.Text = "plotView9";
+            this.plotView9.ZoomHorizontalCursor = System.Windows.Forms.Cursors.SizeWE;
+            this.plotView9.ZoomRectangleCursor = System.Windows.Forms.Cursors.SizeNWSE;
+            this.plotView9.ZoomVerticalCursor = System.Windows.Forms.Cursors.SizeNS;
+            // 
+            // plotView10
+            // 
+            this.plotView10.Location = new System.Drawing.Point(419, 680);
+            this.plotView10.Name = "plotView10";
+            this.plotView10.PanCursor = System.Windows.Forms.Cursors.Hand;
+            this.plotView10.Size = new System.Drawing.Size(369, 138);
+            this.plotView10.TabIndex = 11;
+            this.plotView10.Text = "plotView10";
+            this.plotView10.ZoomHorizontalCursor = System.Windows.Forms.Cursors.SizeWE;
+            this.plotView10.ZoomRectangleCursor = System.Windows.Forms.Cursors.SizeNWSE;
+            this.plotView10.ZoomVerticalCursor = System.Windows.Forms.Cursors.SizeNS;
+            // 
+            // plotView11
+            // 
+            this.plotView11.Location = new System.Drawing.Point(12, 824);
+            this.plotView11.Name = "plotView11";
+            this.plotView11.PanCursor = System.Windows.Forms.Cursors.Hand;
+            this.plotView11.Size = new System.Drawing.Size(369, 138);
+            this.plotView11.TabIndex = 12;
+            this.plotView11.Text = "plotView11";
+            this.plotView11.ZoomHorizontalCursor = System.Windows.Forms.Cursors.SizeWE;
+            this.plotView11.ZoomRectangleCursor = System.Windows.Forms.Cursors.SizeNWSE;
+            this.plotView11.ZoomVerticalCursor = System.Windows.Forms.Cursors.SizeNS;
             // 
             // Form4
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 598);
+            this.ClientSize = new System.Drawing.Size(800, 1024);
+            this.Controls.Add(this.plotView11);
+            this.Controls.Add(this.plotView10);
+            this.Controls.Add(this.plotView9);
+            this.Controls.Add(this.plotView8);
+            this.Controls.Add(this.plotView7);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.plotView6);
@@ -141,7 +212,7 @@
             this.Controls.Add(this.plotView2);
             this.Controls.Add(this.plotView1);
             this.Name = "Form4";
-            this.Text = "Form4";
+            this.Text = "공정 차트";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -156,5 +227,10 @@
         private OxyPlot.WindowsForms.PlotView plotView6;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button button1;
+        private OxyPlot.WindowsForms.PlotView plotView7;
+        private OxyPlot.WindowsForms.PlotView plotView8;
+        private OxyPlot.WindowsForms.PlotView plotView9;
+        private OxyPlot.WindowsForms.PlotView plotView10;
+        private OxyPlot.WindowsForms.PlotView plotView11;
     }
 }

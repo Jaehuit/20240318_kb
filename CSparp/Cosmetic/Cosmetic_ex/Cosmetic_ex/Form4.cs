@@ -1,6 +1,8 @@
-﻿using OxyPlot.Axes;
-using OxyPlot.Series;
+﻿using Cosmetic_ex;
 using OxyPlot;
+using OxyPlot.Axes;
+using OxyPlot.Series;
+using OxyPlot.WindowsForms;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -10,13 +12,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using OxyPlot.WindowsForms;
-using System.Windows.Forms.DataVisualization.Charting;
-using teamProject;
-using DataPoint = OxyPlot.DataPoint;
-using DateTimeIntervalType = OxyPlot.Axes.DateTimeIntervalType;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
-namespace teamProject
+namespace Cosmetic_ex
 {
     public partial class Form4 : Form
     {
@@ -104,6 +102,11 @@ namespace teamProject
             plotView4.Model = DrawGraph(PDataFields.ReactD_Temp.ToString());
             plotView5.Model = DrawGraph(PDataFields.ReactE_Temp.ToString());
             plotView6.Model = DrawGraph(PDataFields.ReactF_Temp.ToString());
+            plotView7.Model = DrawGraph(PDataFields.ReactF_PH.ToString());
+            plotView8.Model = DrawGraph(PDataFields.Power.ToString());
+            plotView9.Model = DrawGraph(PDataFields.CurrentA.ToString());
+            plotView10.Model = DrawGraph(PDataFields.CurrentB.ToString());
+            plotView11.Model = DrawGraph(PDataFields.CurrentC.ToString());
         }
     }
 }
