@@ -1,5 +1,4 @@
-﻿namespace Cosmetic_ex
-
+﻿namespace teamProject
 {
     partial class Form3
     {

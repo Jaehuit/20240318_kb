@@ -8,6 +8,8 @@ namespace teamProject
 {
     public class QData
     {
+        public static object datasQ;
+
         public DateTime date { get; set; } // PK
         public double weight { get; set; }
         public double water { get; set; }

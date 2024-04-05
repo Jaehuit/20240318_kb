@@ -31,6 +31,7 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.button5 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.button2 = new System.Windows.Forms.Button();
@@ -62,7 +63,6 @@
             this.testCount = new System.Windows.Forms.Label();
             this.textBox13 = new System.Windows.Forms.TextBox();
             this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -125,6 +125,16 @@
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "공정 데이터 관리";
+            // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(572, 157);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(86, 23);
+            this.button5.TabIndex = 27;
+            this.button5.Text = "입력 초기화";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // button3
             // 
@@ -309,9 +319,9 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(6, 33);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(59, 12);
+            this.label1.Size = new System.Drawing.Size(54, 12);
             this.label1.TabIndex = 0;
-            this.label1.Text = "DateTime";
+            this.label1.Text = "Datetime";
             // 
             // textBox6
             // 
@@ -386,16 +396,6 @@
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
-            // button5
-            // 
-            this.button5.Location = new System.Drawing.Point(572, 157);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(86, 23);
-            this.button5.TabIndex = 27;
-            this.button5.Text = "입력 초기화";
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
-            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
@@ -405,7 +405,7 @@
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Name = "Form2";
-            this.Text = "Form2";
+            this.Text = "공정 데이터 관리";
             this.groupBox2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.groupBox1.ResumeLayout(false);

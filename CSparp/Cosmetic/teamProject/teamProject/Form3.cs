@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Schema;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace teamProject
@@ -18,7 +19,7 @@ namespace teamProject
         public Form3()
         {
             InitializeComponent();
-            Utils.reScreen(dataGridView1, "QData");
+            Utils.reScreen(dataGridView1, "QData", Form1.digit);
             placeholder.Text = placeholderText;
             placeholder.Enabled = false;
         }
@@ -52,12 +53,11 @@ namespace teamProject
             textBox5.Text = data.HSO.ToString();
             textBox6.Text = data.pH.ToString();
         }
+        
         private QData ValidateAndCreateDataObject()
         {
             QData data = new QData();
-
             data.date = DateTime.Now;
-
             double tempValue;
 
             if (!DateTime.TryParse(textBox1.Text, out _))
@@ -94,12 +94,25 @@ namespace teamProject
         // 데이터 추가
         private void button1_Click(object sender, EventArgs e)
         {
-            QData data = ValidateAndCreateDataObject();
-            if (data != null)
+            try
             {
-                DataManager.Save(data);
-                MessageBox.Show($"{data.date.ToString("yyyy-MM-dd HH:mm:ss.fffffff")} 데이터가 추가 되었습니다.");
-                Utils.reScreen(dataGridView1, "QData");
+                QData data = ValidateAndCreateDataObject();
+                if (data != null)
+                {
+                    if (DataManager.datasQ.Any(d => d.date.Date == data.date.Date))
+                    {
+                        MessageBox.Show("이미 동일한 날짜에 데이터가 입력되었습니다.");
+                        return;
+                    }
+
+                    DataManager.Save(data);
+                        MessageBox.Show($"{data.date.ToString("yyyy-MM-dd HH:mm:ss.fffffff")} 데이터가 추가 되었습니다.");
+                        Utils.reScreen(dataGridView1, "QData", Form1.digit);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("이미 동일한 날짜에 데이터가 있습니다.");
             }
         }
 
@@ -108,12 +121,12 @@ namespace teamProject
             QData data = ValidateAndCreateDataObject();
             if (data != null)
             {
-                // 수정을 위해 select 값을 사용할 수 있어야 합니다.
+                // 수정을 위해 select 값을 사용할 수 있어야 합니다. (해당 변수는 앞에서 정의되어 있어야 함)
                 if (!string.IsNullOrEmpty(select))
                 {
                     DataManager.Update(data, select);
                     MessageBox.Show($"{select} 데이터가 수정 되었습니다.");
-                    Utils.reScreen(dataGridView1, "PData");
+                    Utils.reScreen(dataGridView1, "QData", Form1.digit);
                 }
                 else
                 {
@@ -132,7 +145,7 @@ namespace teamProject
             {
                 DataManager.Delete(data);
                 MessageBox.Show($"{textBox1.Text} 데이터가 삭제 되었습니다.");
-                Utils.reScreen(dataGridView1, "QData");
+                Utils.reScreen(dataGridView1, "QData", Form1.digit);
             }
             else
             {
